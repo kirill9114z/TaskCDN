@@ -10,11 +10,11 @@ class Settings:
     RETRY_STATUSES = {429, 500, 502, 503, 504}
 
     HEADERS = {
-        "User-Agent": "YourAppName/1.0 (shurahtovlist_ru@bk.ru)"
+        "User-Agent": "YourAppName/1.0 (YOUR_MAIL)"
     }
 def get_settings() -> Settings:
     return Settings(
-        DATABASE_URL="postgresql+asyncpg://postgres:12345@localhost:5438/my_db",
+        DATABASE_URL="postgresql+asyncpg://user:pass@localhost:PORT/dbname",
         BASE_URL="https://nominatim.openstreetmap.org/search",
         MAX_RETRIES=3,
         DELAY=1,
