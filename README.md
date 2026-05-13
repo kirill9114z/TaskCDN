@@ -16,24 +16,25 @@
 ## Структура проекта
 SDNTask/
 ├── app/
-│ ├── api/ # Роутеры и зависимости
-│ │ ├── dependencies.py 
-│ │ └── user.py # Эндпоинты /info, /nearest_cities, /add, /delete
-│ ├── core/
-│ │ │──сonfig.py
-│ ├── db/ # Работа с базой данных
-│ │ ├── models/ cities.py
-│ │ ├── base.py 
-│ │ └── session.py 
-│ ├── schemas/ # Pydantic схемы для валидации
-│ │ └── base.py 
-│ ├── services/ # Бизнес-логика
-│ │ ├── coordinates.py 
-│ │ └── user.py 
-│ └── main.py # Создание FastAPI приложения, lifespan, подключение роутеров
-├── .env # Переменные окружения
-├── requirements.txt # Зависимости
-└── README.md
+│   ├── api/                    # Роутеры и зависимости
+│   │   ├── dependencies.py     # Общие зависимости для маршрутов
+│   │   └── user.py             # Эндпоинты /info, /nearest_cities, /add, /delete
+│   ├── core/
+│   │   └── config.py           # Конфигурация приложения
+│   ├── db/                     # Работа с базой данных
+│   │   ├── models/
+│   │   │   └── cities.py       # Модели SQLAlchemy для городов
+│   │   ├── base.py             # Базовый класс для ORM
+│   │   └── session.py          # Управление сессией базы данных
+│   ├── schemas/                # Pydantic схемы для валидации
+│   │   └── base.py             # Базовые Pydantic-схемы
+│   ├── services/               # Бизнес‑логика приложения
+│   │   ├── coordinates.py      # Логика по работе с координатами
+│   │   └── user.py             # Бизнес‑логика, связанная с пользователем
+│   └── main.py                 # Создание FastAPI приложения, lifespan, подключение роутеров
+├── .env                        # Переменные окружения
+├── requirements.txt            # Зависимости Python
+└── README.md                   # Документация проекта
 
 ## Внешнее API
 
