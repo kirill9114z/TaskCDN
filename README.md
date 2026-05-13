@@ -16,9 +16,9 @@
 ## Структура проекта
 SDNTask/
 ├── app/
-│   ├── api/                    # Роутеры и зависимости
-│   │   ├── dependencies.py     # Общие зависимости для маршрутов
-│   │   └── user.py             # Эндпоинты /info, /nearest_cities, /add, /delete
+│   ├── api/                    # Роутеры и зависимости.
+│   │   ├── dependencies.py     # Общие зависимости для маршрутов.
+│   │   └── user.py             # Эндпоинты /info, /nearest_cities, /add, /delete.
 │   ├── core/
 │   │   └── config.py           # Конфигурация приложения
 │   ├── db/                     # Работа с базой данных
