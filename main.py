@@ -9,7 +9,7 @@ from app.db.session import engine
 
 @asynccontextmanager
 async def lifespan(app: FastAPI):
-    timeout = ClientTimeout(total=30)  # Таймаут на весь запрос
+    timeout = ClientTimeout(total=30)  
     app.state.http_session = ClientSession(timeout=timeout)
     async with engine.begin() as conn:
         await conn.run_sync(Base.metadata.create_all)
